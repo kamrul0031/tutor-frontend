@@ -3,7 +3,7 @@
 import { DatePicker } from "@/components/CustomComps/DatePicker";
 import { Input } from "@/components/ui/input";
 import { useForm, Controller } from "react-hook-form";
-import { IconRestore,IconCurrencyTaka,IconMoodEdit,IconMoodX } from '@tabler/icons-react';
+import { IconRestore,IconCurrencyTaka,IconMoodEdit,IconMoodX ,IconSquareXFilled} from '@tabler/icons-react';
 import Image from "next/image";
 import LightBg1 from "@/../public/lightBg1.jpg"
 
@@ -21,23 +21,13 @@ export default function PaymentCard() {
   };
 
   return (
-    <div className="h-screen bg-light-bg-1 bg-cover p-10 grid place-items-center">
-      {/* container div */}
-      <Image
-        src={LightBg1}
-        alt="Background"
-        className="absolute top-0 left-0 w-full h-full object-cover -z-10"
-        layout="fill" // Ensures the image fills the container
-        priority // Loads the image with high priority
-      />
-      <div className="bg-red- w-full h-[60%] rounded-3xl p-5 flex flex-col justify-between shadow-lg shadow-black ">
+    
+      <div className=" w-full bg-white  rounded-3xl p-5 flex flex-col justify-between shadow-lg shadow-black ">
         {/* top section */}
         <div className="flex justify-between">
           <h1 className="uppercase font-bold text-xl">420bp</h1>
           <div className="flex gap-2">
-            <IconMoodEdit size={35}/>
-            <IconMoodX size={35}/>
-            <IconRestore size={35}/>
+            <IconSquareXFilled size={35} color="red"/>
           </div>
         </div>
         <div>
@@ -105,10 +95,12 @@ export default function PaymentCard() {
           </div>
         </form>
         {/* end section */}
-        <div>
-
+        <div className="flex justify-evenly">
+            <IconMoodEdit size={45}/>
+            <IconMoodX size={45}/>
+            <IconRestore size={45}/>
         </div>
       </div>
-    </div>
+   
   );
 }
