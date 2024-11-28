@@ -15,7 +15,10 @@ export default function UserForm() {
   return (
     <>
       <BgImgComp />
-      <div className="p-12 h-screen flex flex-col items-center justify-center">
+      <div className="hidden md:block h-screen ">
+      <h1 className="h-full flex items-center justify-center">this version is only for mobile</h1>
+    </div>
+      <div className="p-12 h-screen flex flex-col items-center justify-center     md:hidden">
         <h1 className="text-2xl font-bold">Student Form</h1>
         <div className="w-full flex gap-5 flex-col justify-center items-center p-5 rounded-3xl bg-red-00 shadow-2xl">
           <ImagePicker />
