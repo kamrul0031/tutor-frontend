@@ -1,7 +1,17 @@
+import Link from "next/link";
 
 
 export default function Home() {
   return (
-    <div>Home</div>
+    <div className="grid place-items-center h-screen">
+     <div className="flex flex-col gap-10">
+      <Link href="/createuserform">Create User Form</Link>
+      <Link href="/allusers">All Users</Link>
+      <Link href="/adminform">Admin Form</Link>
+      <Link href="/userform">User Form</Link>
+     </div>
+    
+    </div>
+   
   )
 }

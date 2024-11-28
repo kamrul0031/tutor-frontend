@@ -19,6 +19,7 @@ import {
 export default function AdminForm() {
   return (
     <>
+    <BgImgComp/>
     <div className="hidden md:block h-screen ">
       <h1 className="h-full flex items-center justify-center">this version is only for mobile</h1>
     </div>
