@@ -220,11 +220,14 @@ const UserCard = () => {
               defaultValue={null} // Default value for the date
               rules={{ required: "Payment date is required" }}
               render={({ field }) => (
-                <DatePicker
+                <div className="w-3/4">
+                  <DatePicker
                   datePlaceholder="Click to set Payment Date"
                   selectedDate={field.value}
                   onDateChange={field.onChange}
                 />
+                </div>
+                
               )}
             />
             {errors.paymentDate && (
