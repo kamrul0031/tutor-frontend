@@ -7,7 +7,8 @@ export default function BgImgComp() {
     return <Image
     src={LightBg1}
     alt="Background"
-    className="absolute top-0 left-0 w-full h-full object-cover -z-10"
+    className=" -z-10"
+    objectFit="cover"
     layout="fill" // Ensures the image fills the container
     priority // Loads the image with high priority
   />

@@ -9,6 +9,12 @@ export default function Home() {
       <Link href="/allusers">All Users</Link>
       <Link href="/adminform">Admin Form</Link>
       <Link href="/userform">User Form</Link>
+
+
+
+      <Link href="/admindashboard">Admin Dashboard</Link>
+      <Link href="/userdashboard">User Dashboard</Link>
+      <Link href="/userform"></Link>
      </div>
     
     </div>
