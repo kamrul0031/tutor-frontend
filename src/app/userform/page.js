@@ -13,8 +13,8 @@ import { IconSignature,IconPhone,IconDroplet,IconMapPin,
 
 export default function UserForm() {
   return (
-    <>
-      <BgImgComp />
+    <div className="bg-lightBg-1 bg-cover">
+      {/* <BgImgComp /> */}
       <div className="hidden md:block h-screen ">
       <h1 className="h-full flex items-center justify-center">this version is only for mobile</h1>
     </div>
@@ -89,6 +89,6 @@ export default function UserForm() {
           <Button>Submit</Button>
         </div>
       </div>
-    </>
+    </div>
   );
 }

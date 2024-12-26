@@ -17,6 +17,9 @@ module.exports = {
       },
     },
     extend: {
+      backgroundImage:{
+        "lightBg-1":"url('../../public/lightBg1.jpg')",
+      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",

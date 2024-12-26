@@ -125,14 +125,15 @@ export default function AllUsersPage() {
     <div className="hidden md:block h-screen ">
       <h1 className="h-full flex items-center justify-center">this version is only for mobile</h1>
     </div>
-    <Image
+    {/* <Image
         src={LightBg1}
         alt="Background"
-        className="absolute top-0 left-0 w-full h-full object-cover -z-10"
+        objectFit="cover"
+        className="absolute h-full -z-10"
         layout="fill" // Ensures the image fills the container
         priority // Loads the image with high priority
-      />
-    <div className="bg-light-bg-1 h-screen bg-cover p-4 pt-16  flex flex-col gap-5     md:hidden">
+      /> */}
+    <div className="bg-lightBg-1 h-screen bg-cover p-4 pt-16  flex flex-col gap-5     md:hidden">
       
       <PlaceholdersAndVanishInput
         placeholders={placeholders}
@@ -175,18 +176,18 @@ const UserCard = () => {
   return(
     <AlertDialog>
     <AlertDialogTrigger>
-    <div className="bg-slate-200/50 border shadow-xl w-full h-44 rounded-3xl p-4 flex gap-3 dark:text-white">
-          <div className="flex flex-col gap-2 items-center justify-center">
-            <div className="w-28 h-28 bg-white rounded-2xl p-2 grid place-items-center">
-              <IconUserFilled size={100}/>
-            </div>
+    <div className="bg-slate-200/50 border shadow-xl w-full h-44 rounded-3xl p-4 flex justify-center items-center gap-3 dark:text-white ">
+          <div className="flex flex-col gap-2 items-center justify-center ">
+            {/* <div className="w-[6rem] h-[6rem] bg-white rounded-2xl p-2 grid place-items-center"> */}
+              <IconUserFilled size={80} className="bg-white rounded-2xl"/>
+            {/* </div> */}
             {/* user image */}
-            <h1 className="font-bold text-xl">426BP</h1>
+            <h1 className="font-bold max-[320px]:text-sm">426BP</h1>
           </div>
-          <div className="capitalize flex flex-col gap-2">
-            <h1 className="font-bold text-xl">student name</h1>
-            <div>
-               <p className="text-sm">international college of bangladesh</p>
+          <div className="capitalize flex flex-col gap-2 ">
+            <h1 className="font-bold sm:text-xl">student name</h1>
+            <div className="max-[520px]:text-[10px]">
+               <p className="text-">international college of bangladesh</p>
                <p><span className="font-semibold">contact : </span>01613201181</p>
                <p><span className="font-semibold">due payments : </span>12/12/24</p>
                <p><span className="font-semibold">last payment : </span>12/12/23</p>

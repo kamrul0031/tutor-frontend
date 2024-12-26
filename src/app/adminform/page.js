@@ -9,9 +9,9 @@ import { IconSignature,IconBuildingFactory2,IconPhone,IconDroplet,IconMapPin } f
 
 export default function AdminForm() {
   return (
-    <>
-      <BgImgComp />
-      <div className="p-12 h-screen flex flex-col items-center justify-center">
+    <div className="bg-lightBg-1 bg-cover">
+      {/* <BgImgComp /> */}
+      <div className=" p-12 h-screen flex flex-col items-center justify-center">
         <h1 className="text-2xl font-bold">Admin Form</h1>
         <div className="w-full flex gap-5 flex-col justify-center items-center p-5 rounded-3xl bg-red-00 shadow-2xl">
           <ImagePicker />
@@ -55,6 +55,6 @@ export default function AdminForm() {
           <Button>Submit</Button>
         </div>
       </div>
-    </>
+    </div>
   );
 }

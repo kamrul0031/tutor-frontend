@@ -18,12 +18,12 @@ import {
 
 export default function AdminForm() {
   return (
-    <>
-    <BgImgComp/>
+    <div className="bg-lightBg-1 bg-cover">
+    {/* <BgImgComp/> */}
     <div className="hidden md:block h-screen ">
       <h1 className="h-full flex items-center justify-center">this version is only for mobile</h1>
     </div>
-      <div className="p-12 h-screen flex flex-col items-center justify-center    md:hidden">
+      <div className=" p-12 h-screen flex flex-col items-center justify-center    md:hidden">
         <h1 className="text-2xl font-bold">Create User Form</h1>
         <div className="w-full flex flex-col justify-center items-center p-5  rounded-3xl bg-red-00 shadow-2xl">
           <div className="bg-red-00 w-3/4 mb-5 flex gap-5 flex-col justify-center items-center">
@@ -56,6 +56,6 @@ export default function AdminForm() {
             <Button>Submit</Button>
         </div>
       </div>
-    </>
+    </div>
   );
 }
