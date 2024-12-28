@@ -5,6 +5,7 @@ import {
   IconTargetArrow,
   IconTrash,
 } from "@tabler/icons-react";
+import { getDate, getDaysInMonth, getHours, getMinutes, getMonth, getTime } from "date-fns";
 import { useState } from "react";
 
 export default function TaskManagerComp({
@@ -119,9 +120,11 @@ export default function TaskManagerComp({
 
         <div className="bg-red-00 text- h-[70%] overflow-y-scroll flex flex-col gap-3">
           {tasks.map((task) => (
-            <div 
+            <label 
+            htmlFor={task.id}
+            onDoubleClick={() => toggleEditing(task.id)}
             key={task.id} 
-            className="flex gap-4 bg-blue-50 p-4 rounded-xl">
+            className="flex gap-4 bg-blue-50 p-4 rounded-xl relative">
               <input
                 type="checkbox"
                 id={task.id}
@@ -131,6 +134,7 @@ export default function TaskManagerComp({
               {task.isEditing ? (
                 <input
                   type="text"
+                  maxLength={20}
                   defaultValue={task.text}
                   onBlur={(e) => updateTask(task.id, e.target.value)}
                   autoFocus
@@ -139,15 +143,17 @@ export default function TaskManagerComp({
                 <div className="flex justify-between w-full">
                    <label
                   htmlFor={task.id}
-                  onDoubleClick={() => toggleEditing(task.id)}
+                  
                 >
                   {task.text}
                 </label>
-                <h1>{new Date(task.id).toLocaleDateString()}</h1>
+                <h1 className="text-xs absolute right-2 top-2">{getDate(task.id)}/{getMonth(task.id) + 1}</h1>
+                {/* <h1 className="text-xs absolute right-2 bottom-2">{new Date(task.id).toLocaleTimeString()}</h1> */}
+                <h1 className="text-xs absolute right-2 bottom-2">{getHours(task.id)}:{getMinutes(task.id)}</h1>
                 </div>
                
               )}
-            </div>
+            </label>
           ))}
         </div>
       </div>

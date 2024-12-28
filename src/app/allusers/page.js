@@ -148,7 +148,7 @@ export default function AllUsersPage() {
       </div>
 
       <FloatingDock
-        mobileClassName="absolute bottom-5 right-8 scale-150"
+        mobileClassName="absolute bottom-5 left-8 scale-150"
         items={links}
       />
 

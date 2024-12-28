@@ -145,7 +145,7 @@ export default function AdminForm() {
 
 
         <FloatingDock
-                mobileClassName="absolute bottom-2 right-8 scale-125"
+                mobileClassName="absolute bottom-2 left-8 scale-125 "
                 items={links}
               />
         {/* end section  */}
