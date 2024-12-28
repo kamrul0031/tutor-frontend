@@ -1,10 +1,13 @@
-import TaskManager from "@/components/CustomComps/TaskManagerComp";
+import TaskManagerComp from "@/components/CustomComps/TaskManagerComp";
 
 
 export default function UserDashboard(){
   return(
     <div>
-     <TaskManager/>
+      <h1>testing page</h1>
+      <div className="h-56 w-56">
+       <TaskManagerComp/>
+      </div>
     </div>
   )
 }
