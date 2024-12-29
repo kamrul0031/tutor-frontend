@@ -13,7 +13,7 @@ export default function AdminForm() {
       {/* <BgImgComp /> */}
       <div className=" p-12 h-screen flex flex-col items-center justify-center">
         <h1 className="text-2xl font-bold">Admin Form</h1>
-        <div className="min-h-[70%]       w-full flex gap-2 flex-col justify-center items-center py-5 px-6 rounded-3xl relative bg-red-00 shadow-2xl">
+        <div className="min-h-[70%]       w-full flex gap-2 flex-col justify-end items-center py-5 px-6 rounded-3xl relative bg-red-00 shadow-2xl">
           <ImagePicker />
           <div className="flex gap-1 h-[9%] w-full ">
             <IconSignature className="bg-white w-auto h-auto  rounded-lg p-1" size={30}/>
@@ -54,7 +54,7 @@ export default function AdminForm() {
             className=" resize-none w-full h-16 placeholder:relative placeholder:top-4 placeholder:text-center  capitalize rounded-md" 
             />
           </div>
-          <div className="h-[20%] w-full flex justify-center items-end">
+          <div className="h-[20%] mt-10 w-full flex justify-center">
             <Button>Submit</Button>
           </div>
         </div>
