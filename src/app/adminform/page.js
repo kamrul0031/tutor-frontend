@@ -41,10 +41,10 @@ export default function AdminForm() {
           <div className="flex gap-1 h-[9%] w-full">
             <IconDroplet className="bg-white w-auto h-auto  rounded-lg p-1" size={30}/>
             <Input
-              type="number"
+              type="text"
               min="0"
-              className=" h-full placeholder:text-center text-center capitalize"
-              placeholder="Contact"
+              className=" h-ful capitalize placeholder:text-center text-center "
+              placeholder="blood group"
             />
           </div>
           <div className="flex gap-1 h-[9%] w-full">
