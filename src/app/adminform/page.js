@@ -13,46 +13,50 @@ export default function AdminForm() {
       {/* <BgImgComp /> */}
       <div className=" p-12 h-screen flex flex-col items-center justify-center">
         <h1 className="text-2xl font-bold">Admin Form</h1>
-        <div className="w-full flex gap-5 flex-col justify-center items-center p-5 rounded-3xl bg-red-00 shadow-2xl">
+        <div className="min-h-[70%]       w-full flex gap-2 flex-col justify-center items-center py-5 px-6 rounded-3xl relative bg-red-00 shadow-2xl">
           <ImagePicker />
-          <div className="flex gap-1">
-            <IconSignature className="bg-white w-10 h-10 rounded-lg p-1" size={30}/>
+          <div className="flex gap-1 h-[9%] w-full ">
+            <IconSignature className="bg-white w-auto h-auto  rounded-lg p-1" size={30}/>
             <Input
-              className="w-3/4 placeholder:text-center text-center capitalize"
+              className=" h-full placeholder:text-center text-center capitalize"
               placeholder="Name"
             />
           </div>
-          <div className="flex gap-1">
-            <IconBuildingFactory2 className="bg-white w-10 h-10 rounded-lg p-1" size={30}/>
+          <div className="flex gap-1 h-[9%] w-full">
+            <IconBuildingFactory2 className="bg-white w-auto h-auto  rounded-lg p-1" size={30}/>
             <Input
-              className="w-3/4 placeholder:text-center text-center capitalize"
+              className=" h-full placeholder:text-center text-center capitalize"
               placeholder="Coaching Name"
             />
           </div>
-          <div className="flex gap-1">
-            <IconPhone className="bg-white w-10 h-10 rounded-lg p-1" size={30}/>
+          <div className="flex gap-1 h-[9%] w-full">
+            <IconPhone className="bg-white w-auto h-auto  rounded-lg p-1" size={30}/>
             <Input
               type="number"
               min="0"
-              className="w-3/4 placeholder:text-center text-center capitalize"
+              className=" h-full placeholder:text-center text-center capitalize"
               placeholder="Contact"
             />
           </div>
-          <div className="flex gap-1">
-            <IconDroplet className="bg-white w-10 h-10 rounded-lg p-1" size={30}/>
+          <div className="flex gap-1 h-[9%] w-full">
+            <IconDroplet className="bg-white w-auto h-auto  rounded-lg p-1" size={30}/>
             <Input
-              className="w-3/4 placeholder:text-center placeholder:capitalize text-center uppercase"
-              placeholder="Blood Group"
+              type="number"
+              min="0"
+              className=" h-full placeholder:text-center text-center capitalize"
+              placeholder="Contact"
             />
           </div>
-          <div className="flex gap-1">
-            <IconMapPin className="bg-white w-10 h-10 rounded-lg p-1" size={30}/>
-            <Input
-              className="w-3/4 h-20 placeholder:text-center -pt-5 capitalize"
-              placeholder="Address"
+          <div className="flex gap-1 h-[9%] w-full">
+            <IconMapPin className="bg-white w-auto h-auto  rounded-lg p-1" size={30}/>
+            <textarea 
+            placeholder="Address"
+            className=" resize-none w-full h-16 placeholder:relative placeholder:top-4 placeholder:text-center  capitalize rounded-md" 
             />
           </div>
-          <Button>Submit</Button>
+          <div className="h-[20%] w-full flex justify-center items-end">
+            <Button>Submit</Button>
+          </div>
         </div>
       </div>
     </div>
