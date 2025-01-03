@@ -81,9 +81,12 @@ export default function TaskManagerComp({
 
   const placeholders = [
     "Add Tasks Here ...",
-    "Double Tap on the Task to Edit it",
-    "For Delete Multiple Tasks,Select & Delete",
-    "For Delete All Tasks,Select All & Delete",
+    "Double Tap on the Task ...",
+    "To Edit it !",
+    "For Delete Multiple Tasks ...",
+    "Select & Delete !",
+    "For Delete All Tasks ...",
+    "Select All & Delete !",
   ];
 
   return (

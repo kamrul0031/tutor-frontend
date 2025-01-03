@@ -6,10 +6,15 @@ import { PlaceholdersAndVanishInput } from "@/components/ui/placeholders-and-van
 
 
 
+
+import ProfileImg from '@/../public/proImg.png';
+
+
+
 import { DatePicker } from "@/components/CustomComps/DatePicker";
 import { Input } from "@/components/ui/input";
 import { useForm, Controller } from "react-hook-form";
-import { IconRestore,IconCurrencyTaka,IconMoodEdit,IconMoodX ,IconSquareXFilled} from '@tabler/icons-react';
+import { IconRestore,IconCurrencyTaka,IconMoodEdit,IconMoodX ,IconSquareXFilled, IconUsers} from '@tabler/icons-react';
 //import floatind dock 
 import { FloatingDock } from "@/components/ui/floating-dock";
 import {
@@ -38,6 +43,7 @@ import {
   AlertDialogTitle,
   AlertDialogTrigger,
 } from "@/components/ui/alert-dialog"
+import ProfileAndNav from "@/components/CustomComps/ProfileAndNavComp";
 
 
    
@@ -53,15 +59,15 @@ export default function AllUsersPage() {
       icon: (
         <IconHome className="h-full w-full text-neutral-500 dark:text-neutral-300" />
       ),
-      href: "#",
+      href: "/",
     },
  
     {
-      title: "Products",
+      title: "All Users",
       icon: (
-        <IconTerminal2 className="h-full w-full text-neutral-500 dark:text-neutral-300" />
+        <IconUsers className="h-full w-full text-neutral-500 dark:text-neutral-300" />
       ),
-      href: "#",
+      href: "/allusers",
     },
     {
       title: "Components",
@@ -133,8 +139,9 @@ export default function AllUsersPage() {
         layout="fill" // Ensures the image fills the container
         priority // Loads the image with high priority
       /> */}
-    <div className="bg-lightBg-1 h-screen bg-cover p-4 pt-16  flex flex-col gap-5     md:hidden">
-      
+    <div className="bg-lightBg-1 h-screen bg-cover p-4  flex flex-col gap-5     md:hidden">
+       {/* admin name section  */}
+      <ProfileAndNav links={links}/>
       <PlaceholdersAndVanishInput
         placeholders={placeholders}
       />
@@ -146,14 +153,8 @@ export default function AllUsersPage() {
        ))
       }
       </div>
-
-      <FloatingDock
-        mobileClassName="absolute bottom-5 left-8 scale-150"
-        items={links}
-      />
-
-      
     </div>
+       
     </>
     
   )

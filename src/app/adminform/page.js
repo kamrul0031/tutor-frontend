@@ -120,10 +120,6 @@ export default function AdminForm() {
             <Button>Submit</Button>
           </div>
         </div>
-        <FloatingDock
-                        mobileClassName="absolute bottom-2 left-8 scale-125 "
-                        items={links}
-                      />
       </div>
       
     </div>

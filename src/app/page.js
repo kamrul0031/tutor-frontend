@@ -14,7 +14,8 @@ export default function Home() {
 
       <Link href="/admindashboard">Admin Dashboard</Link>
       <Link href="/userDashboard">User Dashboard</Link>
-      <Link href="/userform"></Link>
+      <Link href="/userform">userForm</Link>
+      <Link href="/loginForm">LoginForm</Link>
      </div>
     
     </div>

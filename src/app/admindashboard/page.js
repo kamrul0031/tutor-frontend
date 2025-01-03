@@ -1,71 +1,65 @@
 "use client";
 
 import BgImgComp from "@/components/CustomComps/BgImgComp";
-import ProfileImg from '@/../public/proImg.png';
 import CheckboxComp from "@/components/CustomComps/CheckboxComp";
 import { Button } from "@/components/ui/button";
 import { FloatingDock } from "@/components/ui/floating-dock";
-import { IconBrandGithub, IconBrandX, IconChecklist, IconEditCircle, IconExchange, IconHome, IconMoodPlus, IconNewSection, IconTerminal2, IconUserPause, IconUserPlus, IconUsersPlus } from "@tabler/icons-react";
+import { IconBasketCheck, IconBrandGithub, IconBrandX, IconChecklist, IconEditCircle, IconExchange, IconFileTypeDoc, IconHome, IconLogout, IconMoodPlus, IconNewSection, IconPhone, IconSitemap, IconTerminal2, IconUser, IconUserPause, IconUserPlus, IconUsers, IconUsersPlus, IconX } from "@tabler/icons-react";
 import Image from "next/image";
 import TaskManagerComp from "@/components/CustomComps/TaskManagerComp";
+
+
+
+import {
+  HoverCard,
+  HoverCardContent,
+  HoverCardTrigger,
+} from "@/components/ui/hover-card"
+import { useState } from "react";
+import ProfileAndNav from "@/components/CustomComps/ProfileAndNavComp";
 
 
 export default function AdminForm() {
 
 
-
   const links = [
     {
-      title: "Home",
+      title: "all files",
+      icon: (
+        <IconFileTypeDoc className="h-full w-full text-neutral-500 dark:text-neutral-300" />
+      ),
+      href: "/allusers",
+    },
+    {
+      title: "all batches",
+      icon: (
+        <IconSitemap className="h-full w-full text-neutral-500 dark:text-neutral-300" />
+      ),
+      href: "/allusers",
+    },
+    {
+      title: "all users",
+      icon: (
+        <IconUsers className="h-full w-full text-neutral-500 dark:text-neutral-300" />
+      ),
+      href: "/allusers",
+    },
+    {
+      title: "create user",
+      icon: (
+        <IconNewSection className="h-full w-full text-neutral-500 dark:text-neutral-300" />
+      ),
+      href: "/createuserform",
+    },
+    {
+      title: "home",
       icon: (
         <IconHome className="h-full w-full text-neutral-500 dark:text-neutral-300" />
       ),
-      href: "#",
-    },
- 
-    {
-      title: "Products",
-      icon: (
-        <IconTerminal2 className="h-full w-full text-neutral-500 dark:text-neutral-300" />
-      ),
-      href: "#",
-    },
-    {
-      title: "Components",
-      icon: (
-        <IconNewSection className="h-full w-full text-neutral-500 dark:text-neutral-300" />
-      ),
-      href: "#",
-    },
-    {
-      title: "Aceternity UI",
-      icon: (
-        <IconNewSection className="h-full w-full text-neutral-500 dark:text-neutral-300" />
-      ),
-      href: "#",
-    },
-    {
-      title: "Changelog",
-      icon: (
-        <IconExchange className="h-full w-full text-neutral-500 dark:text-neutral-300" />
-      ),
-      href: "#",
-    },
- 
-    {
-      title: "Twitter",
-      icon: (
-        <IconBrandX className="h-full w-full text-neutral-500 dark:text-neutral-300" />
-      ),
-      href: "#",
-    },
-    {
-      title: "GitHub",
-      icon: (
-        <IconBrandGithub className="h-full w-full text-neutral-500 dark:text-neutral-300" />
-      ),
-      href: "#",
-    },
+      href: "/",
+    }
+    
+
   ];
 
 
@@ -78,11 +72,7 @@ export default function AdminForm() {
       <h1 className="h-full flex items-center justify-center">this version is only for mobile</h1>
     </div>
       <div className="flex flex-col gap-4 p-4 items-center h-screen md:hidden">
-        {/* admin name section  */}
-        <div className="bg-blue-00 flex gap-2 items-center w-full min-h-[10%] text-xl font-semibold">
-          <Image src={ProfileImg} alt="profile img" className="w-11 h-11 border-2 border-white rounded-full"/>
-          <h1 className="capitalize relative top-2">hello,mk ....!</h1>
-        </div>
+        <ProfileAndNav links={links}/>
         {/* current batches section  */}
         <div className="bg-blue-00 min-h-[30%] capitalize w-full grid gap-2 grid-cols-2">
           <div className="bg-white/50 shadow-xl max-h-[320px]:text-green-500 rounded-xl flex flex-col justify-center items-center">
@@ -144,10 +134,7 @@ export default function AdminForm() {
 
 
 
-        <FloatingDock
-                mobileClassName="absolute bottom-2 left-8 scale-125 "
-                items={links}
-              />
+      
         {/* end section  */}
         {/* <div className="bg-blue-500 h-[15%] w-full flex justify-evenly">
           <button>
